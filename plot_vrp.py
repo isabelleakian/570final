@@ -7,6 +7,8 @@
 import os
 import numpy as np
 import torch
+import simple_tsp
+
 
 
 # In[2]:
@@ -132,7 +134,9 @@ def plot_vehicle_routes(data, route, ax1, markersize=5, visualize_demands=False,
 # In[4]:
 
 
-model, _ = load_model('pretrained/cvrp_100/')
+model1, _ = load_model('pretrained/cvrp_100/')
+model2, _ = load_model('pretrained/tsp_100/')
+
 torch.manual_seed(1234)
 dataset = CVRP.make_dataset(size=100, num_samples=10)
 
@@ -145,19 +149,47 @@ dataloader = DataLoader(dataset, batch_size=1000)
 
 # Make var works for dicts
 batch = next(iter(dataloader))
-
+data_batch = list(batch.items())
+# oracle_array = np.array(data_batch, 2)
 # Run the model
-model.eval()
-model.set_decode_type('greedy')
+model1.eval()
+model1.set_decode_type('greedy')
+model2.eval()
+model2.set_decode_type('greedy')
+# oracle = simple_tsp.make_oracle(model2, oracle_array)
+
 with torch.no_grad():
-    length, log_p, pi = model(batch, return_pi=True)
-tours = pi
+    length1, log_p1, pi1 = model1(batch, return_pi=True)
+    # length2, log_p2, pi2 = model2(batch, return_pi=True)
+
+
+    # tour_tsp = []
+    # tour_p = []
+    # while len(tour_tsp) < length1:
+    #     p = oracle(tour_tsp)
+    #     i = np.argmax(p)
+    #     tour_tsp.append(i)
+    #     tour_p.append(p)
+    #
+    # print(tour_tsp)
+
+# if length1 < length2:
+tours = pi1
+print(tours)
+length2, log_p2, pi2 = model2(tours, return_pi=True)
+tours2 = pi2
+# else:
 
 # Plot the results
+for i, (data, tour) in enumerate(zip(dataset, tours2)):
+    fig, ax = plt.subplots(figsize=(10, 10))
+    plot_vehicle_routes(data, tour, ax, visualize_demands=False, demand_scale=50, round_demand=True)
+    fig.savefig(os.path.join('images', 'cvrp_and_tsp_{}.png'.format(i)))
+
 for i, (data, tour) in enumerate(zip(dataset, tours)):
     fig, ax = plt.subplots(figsize=(10, 10))
     plot_vehicle_routes(data, tour, ax, visualize_demands=False, demand_scale=50, round_demand=True)
-    fig.savefig(os.path.join('images', 'cvrp_{}.png'.format(i)))
+    fig.savefig(os.path.join('images', 'cvrp_v2{}.png'.format(i)))
 
 
 # In[ ]:
