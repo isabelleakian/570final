@@ -65,7 +65,7 @@ class TSPDataset(Dataset):
                 data = pickle.load(f)
                 self.data = [torch.FloatTensor(row) for row in (data[offset:offset+num_samples])]
                 print(self.data)
-        elif len(inputdata) > 0:
+        elif len(inputdata) > 0: #written by Isabelle Akian
             self.data = [torch.FloatTensor(row, 2) for row in (inputdata[offset:offset+num_samples])]
         else:
             # Sample points randomly in [0, 1] square

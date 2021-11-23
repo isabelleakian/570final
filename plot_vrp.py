@@ -48,13 +48,13 @@ def discrete_cmap(N, base_cmap=None):
   return base.from_list(cmap_name, color_list, N)
 
 
-def coord_to_loc(dataset, coord):
+def coord_to_loc(dataset, coord): #written by Isabelle Akian
     locs = dataset['loc'].cpu().numpy()
 
     return np.where(locs == coord)[0][0]+1
 
 
-def get_routes_and_coords(datasets, route_for_coord):
+def get_routes_and_coords(datasets, route_for_coord):#written by Isabelle Akian
     route_list = [r[r != 0] for r in np.split(route_for_coord.cpu().numpy(), np.where(route_for_coord == 0)[0]) if (r != 0).any()]
 
     new_locs = datasets['loc'].cpu().numpy()
@@ -189,7 +189,7 @@ for i, (data, tour) in enumerate(zip(dataset, tours)):
     plot_vehicle_routes(data, tour, ax, visualize_demands=False, demand_scale=50, round_demand=True)
     fig.savefig(os.path.join('images', 'cvrp_{}.png'.format(i)))
 
-for i, (data, tour) in enumerate(zip(dataset, tours)):
+for i, (data, tour) in enumerate(zip(dataset, tours)): #written by Isabelle Akian
     newcoords, new_routes = get_routes_and_coords(data, tour)
     newroutes = []
     for k in newcoords:
