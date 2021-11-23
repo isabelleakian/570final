@@ -54,7 +54,7 @@ class TSP(object):
 
 class TSPDataset(Dataset):
     
-    def __init__(self, filename=None, size=50, num_samples=1000000, offset=0, distribution=None, inputdata=[]):
+    def __init__(self, filename=None, size=50, num_samples=1000000, offset=0, distribution=None):
         super(TSPDataset, self).__init__()
 
         self.data_set = []
@@ -64,9 +64,6 @@ class TSPDataset(Dataset):
             with open(filename, 'rb') as f:
                 data = pickle.load(f)
                 self.data = [torch.FloatTensor(row) for row in (data[offset:offset+num_samples])]
-                print(self.data)
-        elif len(inputdata) > 0:
-            self.data = [torch.FloatTensor(row, 2) for row in (inputdata[offset:offset+num_samples])]
         else:
             # Sample points randomly in [0, 1] square
             self.data = [torch.FloatTensor(size, 2).uniform_(0, 1) for i in range(num_samples)]

@@ -1,11 +1,22 @@
-# Analyzing the Vehicle Route Problem: A Heuristic Approach to Route Planning and Optimization
+# Attention, Learn to Solve Routing Problems!
 
-## Introduction
-This model incorporates the attention based model from the paper [Attention, Learn to Solve Routing Problems!](https://openreview.net/forum?id=ByxBFsRqYm) which has been accepted at [ICLR 2019](https://iclr.cc/Conferences/2019) for learning to solve the Travelling Salesman Problem (TSP) and the Vehicle Routing Problem (VRP), Orienteering Problem (OP) and (Stochastic) Prize Collecting TSP (PCTSP). Training with REINFORCE with greedy rollout baseline.
-The paper describing this specific extension of the aforementioned model is from the paper [Analyzing the Vehicle Route Problem: A Heuristic Approach to Route Planning and Optimization](paper.pdf)
+Attention based model for learning to solve the Travelling Salesman Problem (TSP) and the Vehicle Routing Problem (VRP), Orienteering Problem (OP) and (Stochastic) Prize Collecting TSP (PCTSP). Training with REINFORCE with greedy rollout baseline.
+
+![TSP100](images/tsp.gif)
 
 ## Paper
-For more details, please see our paper [Analyzing the Vehicle Route Problem: A Heuristic Approach to Route Planning and Optimization](paper.pdf).
+For more details, please see our paper [Attention, Learn to Solve Routing Problems!](https://openreview.net/forum?id=ByxBFsRqYm) which has been accepted at [ICLR 2019](https://iclr.cc/Conferences/2019). If this code is useful for your work, please cite our paper:
+
+```
+@inproceedings{
+    kool2018attention,
+    title={Attention, Learn to Solve Routing Problems!},
+    author={Wouter Kool and Herke van Hoof and Max Welling},
+    booktitle={International Conference on Learning Representations},
+    year={2019},
+    url={https://openreview.net/forum?id=ByxBFsRqYm},
+}
+``` 
 
 ## Dependencies
 
@@ -16,12 +27,6 @@ For more details, please see our paper [Analyzing the Vehicle Route Problem: A H
 * tqdm
 * [tensorboard_logger](https://github.com/TeamHG-Memex/tensorboard_logger)
 * Matplotlib (optional, only for plotting)
-
-## Differences
-To view the differences between the implementation in this codebase, follow [this link]() to view an open pull request that will show the file discrepancies.
-
-
-
 
 ## Quick start
 
