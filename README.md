@@ -41,7 +41,8 @@ python plot_vrp.py
 ```
 The output will be two sets of ten images, one which runs the Capacitated Vehicle Routing Problem (CVRP) ```cvrp_100``` model on 
 a graph of 100 nodes, and one which runs this as well as the Traveling Salesman Problem (TSP) ```tsp_100``` model on each
-outputted route from the ```cvrp_100``` model. An example is shown below: <br />
+outputted route from the ```cvrp_100``` model. The data for this run is randomly generated within the script, but [generate.py](generate.py) can 
+also be used to generate data for testing purposes. For more details, see [the original README file](readfiles/README(Kool).md). An example is shown below: <br />
 <br />
 CVRP:
 ![CVRP100](images/cvrp_0.png)<br />
@@ -54,7 +55,7 @@ route as well as the total distance did not change.<br />
 <br />
 The [plot_vrp.py](plot_vrp.py) script can be altered in order to apply different versions of the CVRP models as well as different 
 versions of the TSP model that is overlayed by following the steps from [the original README file](readfiles/README(Kool).md) which allow
-users to generate and train models with specific parameters. If the amount of graph nodes is changed for the new model, this 
+users to generate data, as well as create and train models with specific parameters. If the amount of graph nodes is changed for the new model, this 
 must also be adjusted in the [plot_vrp.py](plot_vrp.py) script. 
 
 ## Slight improvements with Beam Search
