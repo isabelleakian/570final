@@ -17,6 +17,7 @@ model, _ = load_model('pretrained/tsp_100/')
 model.eval()  # Put in evaluation mode to not track gradients
 
 xy = np.random.rand(100, 2)
+# print(xy)
 
 def make_oracle(model, xy, temperature=1.0):
     

@@ -76,7 +76,7 @@ while (len(tour) < len(xy)):
         i = np.argmax(p)
     tour.append(i)
     tour_p.append(p)
-
+print(xy)
 print(tour)
 
 # In[3]:
