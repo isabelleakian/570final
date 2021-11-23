@@ -133,6 +133,7 @@ plot_tsp(xy, tour, ax)
 
 from matplotlib.collections import PatchCollection
 from matplotlib.patches import Rectangle
+from matplotlib.animation import PillowWriter
 from matplotlib.lines import Line2D
 from IPython.display import HTML
 
@@ -217,7 +218,9 @@ def plot_tsp_ani(xy, tour, tour_p=None, max_steps=1000):
 
     
 animation = plot_tsp_ani(xy, tour, tour_p).animate(interval=500)
-# animation.save('images/tsp.gif', writer='imagemagick', fps=2)  # requires imagemagick
+writer = PillowWriter(fps=2)
+# ani.save("demo_sine.gif", writer=writer)
+animation.save('images/tsp_adjusted.gif', writer='writer', fps=2)  # requires imagemagick
 # compress by running 'convert tsp.gif -strip -coalesce -layers Optimize tsp.gif'
 # HTML(animation.to_html5_video())  # requires ffmpeg
 
