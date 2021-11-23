@@ -1,0 +1,858 @@
+[1mdiff --git a/images/cvrp_0.png b/images/cvrp_0.png[m
+[1mindex 76a3013..93a7843 100644[m
+Binary files a/images/cvrp_0.png and b/images/cvrp_0.png differ
+[1mdiff --git a/images/cvrp_1.png b/images/cvrp_1.png[m
+[1mdeleted file mode 100644[m
+[1mindex 5471ec8..0000000[m
+Binary files a/images/cvrp_1.png and /dev/null differ
+[1mdiff --git a/images/cvrp_2.png b/images/cvrp_2.png[m
+[1mindex 58c573e..91d291a 100644[m
+Binary files a/images/cvrp_2.png and b/images/cvrp_2.png differ
+[1mdiff --git a/images/cvrp_3.png b/images/cvrp_3.png[m
+[1mindex 6777d2b..c2db90b 100644[m
+Binary files a/images/cvrp_3.png and b/images/cvrp_3.png differ
+[1mdiff --git a/images/cvrp_4.png b/images/cvrp_4.png[m
+[1mindex 65325f6..dd8db61 100644[m
+Binary files a/images/cvrp_4.png and b/images/cvrp_4.png differ
+[1mdiff --git a/images/cvrp_5.png b/images/cvrp_5.png[m
+[1mindex 0fa0cf8..e6af1d2 100644[m
+Binary files a/images/cvrp_5.png and b/images/cvrp_5.png differ
+[1mdiff --git a/images/cvrp_6.png b/images/cvrp_6.png[m
+[1mindex d1fc946..dbac208 100644[m
+Binary files a/images/cvrp_6.png and b/images/cvrp_6.png differ
+[1mdiff --git a/images/cvrp_7.png b/images/cvrp_7.png[m
+[1mindex fb225ce..d5cde90 100644[m
+Binary files a/images/cvrp_7.png and b/images/cvrp_7.png differ
+[1mdiff --git a/images/cvrp_8.png b/images/cvrp_8.png[m
+[1mindex 624dac8..60786e8 100644[m
+Binary files a/images/cvrp_8.png and b/images/cvrp_8.png differ
+[1mdiff --git a/images/cvrp_9.png b/images/cvrp_9.png[m
+[1mindex 2361b86..0e054a5 100644[m
+Binary files a/images/cvrp_9.png and b/images/cvrp_9.png differ
+[1mdiff --git a/images/cvrp_and_tsp_0.png b/images/cvrp_and_tsp_0.png[m
+[1mnew file mode 100644[m
+[1mindex 0000000..20d9053[m
+Binary files /dev/null and b/images/cvrp_and_tsp_0.png differ
+[1mdiff --git a/images/cvrp_and_tsp_1.png b/images/cvrp_and_tsp_1.png[m
+[1mnew file mode 100644[m
+[1mindex 0000000..a89d098[m
+Binary files /dev/null and b/images/cvrp_and_tsp_1.png differ
+[1mdiff --git a/images/cvrp_and_tsp_2.png b/images/cvrp_and_tsp_2.png[m
+[1mnew file mode 100644[m
+[1mindex 0000000..16d2b83[m
+Binary files /dev/null and b/images/cvrp_and_tsp_2.png differ
+[1mdiff --git a/images/cvrp_and_tsp_3.png b/images/cvrp_and_tsp_3.png[m
+[1mnew file mode 100644[m
+[1mindex 0000000..c2db90b[m
+Binary files /dev/null and b/images/cvrp_and_tsp_3.png differ
+[1mdiff --git a/images/cvrp_and_tsp_4.png b/images/cvrp_and_tsp_4.png[m
+[1mnew file mode 100644[m
+[1mindex 0000000..dd8db61[m
+Binary files /dev/null and b/images/cvrp_and_tsp_4.png differ
+[1mdiff --git a/images/cvrp_and_tsp_5.png b/images/cvrp_and_tsp_5.png[m
+[1mnew file mode 100644[m
+[1mindex 0000000..48b6bae[m
+Binary files /dev/null and b/images/cvrp_and_tsp_5.png differ
+[1mdiff --git a/images/cvrp_and_tsp_6.png b/images/cvrp_and_tsp_6.png[m
+[1mnew file mode 100644[m
+[1mindex 0000000..dbac208[m
+Binary files /dev/null and b/images/cvrp_and_tsp_6.png differ
+[1mdiff --git a/images/cvrp_and_tsp_7.png b/images/cvrp_and_tsp_7.png[m
+[1mnew file mode 100644[m
+[1mindex 0000000..d5cde90[m
+Binary files /dev/null and b/images/cvrp_and_tsp_7.png differ
+[1mdiff --git a/images/cvrp_and_tsp_8.png b/images/cvrp_and_tsp_8.png[m
+[1mnew file mode 100644[m
+[1mindex 0000000..60786e8[m
+Binary files /dev/null and b/images/cvrp_and_tsp_8.png differ
+[1mdiff --git a/images/cvrp_and_tsp_9.png b/images/cvrp_and_tsp_9.png[m
+[1mnew file mode 100644[m
+[1mindex 0000000..0e054a5[m
+Binary files /dev/null and b/images/cvrp_and_tsp_9.png differ
+[1mdiff --git a/images/tsp_adjusted.gif b/images/tsp_adjusted.gif[m
+[1mnew file mode 100644[m
+[1mindex 0000000..7016917[m
+Binary files /dev/null and b/images/tsp_adjusted.gif differ
+[1mdiff --git a/plot_vrp.py b/plot_vrp.py[m
+[1mnew file mode 100644[m
+[1mindex 0000000..6fb96b5[m
+[1m--- /dev/null[m
+[1m+++ b/plot_vrp.py[m
+[36m@@ -0,0 +1,279 @@[m
+[32m+[m[32m#!/usr/bin/env python[m
+[32m+[m[32m# coding: utf-8[m
+[32m+[m
+[32m+[m[32m# In[1]:[m
+[32m+[m
+[32m+[m
+[32m+[m[32mimport os[m
+[32m+[m[32mimport numpy as np[m
+[32m+[m[32mimport torch[m
+[32m+[m[32m# import simple_tsp[m
+[32m+[m
+[32m+[m
+[32m+[m
+[32m+[m[32m# In[2]:[m
+[32m+[m
+[32m+[m
+[32m+[m[32mfrom torch.utils.data import DataLoader[m
+[32m+[m
+[32m+[m[32m# import simple_tsp[m
+[32m+[m[32mfrom generate_data import generate_vrp_data[m
+[32m+[m[32mfrom utils import load_model[m
+[32m+[m[32mfrom problems import CVRP, TSP[m
+[32m+[m
+[32m+[m[32m# In[3]:[m
+[32m+[m
+[32m+[m
+[32m+[m[32m# get_ipython().run_line_magic('matplotlib', 'inline')[m
+[32m+[m[32mfrom matplotlib import pyplot as plt[m
+[32m+[m
+[32m+[m[32mfrom matplotlib.collections import PatchCollection[m
+[32m+[m[32mfrom matplotlib.patches import Rectangle[m
+[32m+[m[32mfrom matplotlib.lines import Line2D[m
+[32m+[m
+[32m+[m[32m# Code inspired by Google OR Tools plot:[m
+[32m+[m[32m# https://github.com/google/or-tools/blob/fb12c5ded7423d524fc6c95656a9bdc290a81d4d/examples/python/cvrptw_plot.py[m
+[32m+[m
+[32m+[m[32mdef discrete_cmap(N, base_cmap=None):[m
+[32m+[m[32m  """[m
+[32m+[m[32m    Create an N-bin discrete colormap from the specified input map[m
+[32m+[m[32m    """[m
+[32m+[m[32m  # Note that if base_cmap is a string or None, you can simply do[m
+[32m+[m[32m  #    return plt.cm.get_cmap(base_cmap, N)[m
+[32m+[m[32m  # The following works for string, None, or a colormap instance:[m
+[32m+[m
+[32m+[m[32m  base = plt.cm.get_cmap(base_cmap)[m
+[32m+[m[32m  color_list = base(np.linspace(0, 1, N))[m
+[32m+[m[32m  cmap_name = base.name + str(N)[m
+[32m+[m[32m  return base.from_list(cmap_name, color_list, N)[m
+[32m+[m
+[32m+[m[32mdef coord_to_loc(dataset, coord):[m
+[32m+[m[32m    locs = dataset['loc'].cpu().numpy()[m
+[32m+[m
+[32m+[m[32m    return np.where(locs == coord)[0][0]+1[m
+[32m+[m
+[32m+[m[32mdef get_routes_and_coords(datasets, route_for_coord):[m
+[32m+[m[32m    route_list = [r[r != 0] for r in np.split(route_for_coord.cpu().numpy(), np.where(route_for_coord == 0)[0]) if (r != 0).any()][m
+[32m+[m[32m    # print(route_list)[m
+[32m+[m[32m    new_locs = datasets['loc'].cpu().numpy()[m
+[32m+[m[32m    # print(new_locs)[m
+[32m+[m[32m    # print(new_locs)[m
+[32m+[m[32m    # print(len(routes))[m
+[32m+[m[32m    new_coords = [[]]*len(route_list)[m
+[32m+[m
+[32m+[m[32m    for veh_number, r in enumerate(route_list):[m
+[32m+[m[32m        # print(veh_number, r)[m
+[32m+[m[32m        # for i in enumerate(r[1]):[m
+[32m+[m[32m        new_coords[veh_number] = new_locs[r - 1, :][m
+[32m+[m[32m    # print(new_coords)[m
+[32m+[m[32m    return new_coords, route_list[m
+[32m+[m
+[32m+[m
+[32m+[m[32mdef plot_vehicle_routes(data, route, ax1, markersize=5, visualize_demands=False, demand_scale=1, round_demand=False):[m
+[32m+[m[32m    """[m
+[32m+[m[32m    Plot the vehicle routes on matplotlib axis ax1.[m
+[32m+[m[32m    """[m
+[32m+[m[41m    [m
+[32m+[m[32m    # route is one sequence, separating different routes with 0 (depot)[m
+[32m+[m[32m    routes = [r[r!=0] for r in np.split(route.cpu().numpy(), np.where(route==0)[0]) if (r != 0).any()][m
+[32m+[m[32m    # print(routes)[m
+[32m+[m[32m    depot = data['depot'].cpu().numpy()[m
+[32m+[m[32m    locs = data['loc'].cpu().numpy()[m
+[32m+[m[32m    demands = data['demand'].cpu().numpy() * demand_scale[m
+[32m+[m[32m    capacity = demand_scale # Capacity is always 1[m
+[32m+[m
+[32m+[m[32m    x_dep, y_dep = depot[m
+[32m+[m[32m    ax1.plot(x_dep, y_dep, 'sk', markersize=markersize*4)[m
+[32m+[m[32m    ax1.set_xlim(0, 1)[m
+[32m+[m[32m    ax1.set_ylim(0, 1)[m
+[32m+[m[41m    [m
+[32m+[m[32m    legend = ax1.legend(loc='upper center')[m
+[32m+[m[41m    [m
+[32m+[m[32m    cmap = discrete_cmap(len(routes) + 2, 'nipy_spectral')[m
+[32m+[m[32m    dem_rects = [][m
+[32m+[m[32m    used_rects = [][m
+[32m+[m[32m    cap_rects = [][m
+[32m+[m[32m    qvs = [][m
+[32m+[m[32m    total_dist = 0[m
+[32m+[m[32m    for veh_number, r in enumerate(routes):[m
+[32m+[m[32m        # print(r)[m
+[32m+[m[32m        color = cmap(len(routes) - veh_number) # Invert to have in rainbow order[m
+[32m+[m
+[32m+[m[32m        route_demands = demands[r - 1][m
+[32m+[m[32m        coords = locs[r - 1, :][m
+[32m+[m[32m        # print("coord", coords)[m
+[32m+[m[32m        xs, ys = coords.transpose()[m
+[32m+[m
+[32m+[m[32m        total_route_demand = sum(route_demands)[m
+[32m+[m[32m        # assert total_route_demand <= capacity[m
+[32m+[m[32m        if not visualize_demands:[m
+[32m+[m[32m            ax1.plot(xs, ys, 'o', mfc=color, markersize=markersize, markeredgewidth=0.0)[m
+[32m+[m[41m        [m
+[32m+[m[32m        dist = 0[m
+[32m+[m[32m        x_prev, y_prev = x_dep, y_dep[m
+[32m+[m[32m        cum_demand = 0[m
+[32m+[m[32m        for (x, y), d in zip(coords, route_demands):[m
+[32m+[m[32m            dist += np.sqrt((x - x_prev) ** 2 + (y - y_prev) ** 2)[m
+[32m+[m[41m            [m
+[32m+[m[32m            cap_rects.append(Rectangle((x, y), 0.01, 0.1))[m
+[32m+[m[32m            used_rects.append(Rectangle((x, y), 0.01, 0.1 * total_route_demand / capacity))[m
+[32m+[m[32m            dem_rects.append(Rectangle((x, y + 0.1 * cum_demand / capacity), 0.01, 0.1 * d / capacity))[m
+[32m+[m[41m            [m
+[32m+[m[32m            x_prev, y_prev = x, y[m
+[32m+[m[32m            cum_demand += d[m
+[32m+[m[41m            [m
+[32m+[m[32m        dist += np.sqrt((x_dep - x_prev) ** 2 + (y_dep - y_prev) ** 2)[m
+[32m+[m[32m        total_dist += dist[m
+[32m+[m[32m        qv = ax1.quiver([m
+[32m+[m[32m            xs[:-1],[m
+[32m+[m[32m            ys[:-1],[m
+[32m+[m[32m            xs[1:] - xs[:-1],[m
+[32m+[m[32m            ys[1:] - ys[:-1],[m
+[32m+[m[32m            scale_units='xy',[m
+[32m+[m[32m            angles='xy',[m
+[32m+[m[32m            scale=1,[m
+[32m+[m[32m            color=color,[m
+[32m+[m[32m            label='R{}, # {}, c {} / {}, d {:.2f}'.format([m
+[32m+[m[32m                veh_number,[m[41m [m
+[32m+[m[32m                len(r),[m[41m [m
+[32m+[m[32m                int(total_route_demand) if round_demand else total_route_demand,[m[41m [m
+[32m+[m[32m                int(capacity) if round_demand else capacity,[m
+[32m+[m[32m                dist[m
+[32m+[m[32m            )[m
+[32m+[m[32m        )[m
+[32m+[m[41m        [m
+[32m+[m[32m        qvs.append(qv)[m
+[32m+[m[41m        [m
+[32m+[m[32m    ax1.set_title('{} routes, total distance {:.2f}'.format(len(routes), total_dist))[m
+[32m+[m[32m    ax1.legend(handles=qvs)[m
+[32m+[m[41m    [m
+[32m+[m[32m    pc_cap = PatchCollection(cap_rects, facecolor='whitesmoke', alpha=1.0, edgecolor='lightgray')[m
+[32m+[m[32m    pc_used = PatchCollection(used_rects, facecolor='lightgray', alpha=1.0, edgecolor='lightgray')[m
+[32m+[m[32m    pc_dem = PatchCollection(dem_rects, facecolor='black', alpha=1.0, edgecolor='black')[m
+[32m+[m[41m    [m
+[32m+[m[32m    if visualize_demands:[m
+[32m+[m[32m        ax1.add_collection(pc_cap)[m
+[32m+[m[32m        ax1.add_collection(pc_used)[m
+[32m+[m[32m        ax1.add_collection(pc_dem)[m
+[32m+[m
+[32m+[m
+[32m+[m[32m# In[4]:[m
+[32m+[m
+[32m+[m
+[32m+[m[32mmodel1, _ = load_model('pretrained/cvrp_100/')[m
+[32m+[m[32mmodel2, _ = load_model('pretrained/tsp_100/')[m
+[32m+[m
+[32m+[m[32mtorch.manual_seed(1234)[m
+[32m+[m[32mdataset = CVRP.make_dataset(size=100, num_samples=10)[m
+[32m+[m
+[32m+[m
+[32m+[m[32m# In[5]:[m
+[32m+[m
+[32m+[m
+[32m+[m[32m# Need a dataloader to batch instances[m
+[32m+[m[32mdataloader = DataLoader(dataset, batch_size=1000)[m
+[32m+[m[32m# print(dataset)[m
+[32m+[m[32m# Make var works for dicts[m
+[32m+[m[32mbatch = next(iter(dataloader))[m
+[32m+[m[32m# print(batch['loc'].numpy().shape)[m
+[32m+[m[32m# print(batch)[m
+[32m+[m
+[32m+[m[32m# data_batch = list(batch.items())[m
+[32m+[m[32m# oracle_array = np.array(data_batch, 2)[m
+[32m+[m[32m# Run the model[m
+[32m+[m[32mmodel1.eval()[m
+[32m+[m[32mmodel1.set_decode_type('greedy')[m
+[32m+[m[32mmodel2.eval()[m
+[32m+[m[32mmodel2.set_decode_type('greedy')[m
+[32m+[m
+[32m+[m[32m# oracle = simple_tsp.make_oracle(model2, oracle_array)[m
+[32m+[m
+[32m+[m[32mwith torch.no_grad():[m
+[32m+[m[32m    length1, log_p1, pi1 = model1(batch, return_pi=True)[m
+[32m+[m[32m    # print(batch)[m
+[32m+[m[32m    # length2, log_p2, pi2 = model2(batch['loc'], return_pi=True)[m
+[32m+[m[32m    # oracle = simple_tsp.make_oracle(model2, np.array(batch))[m
+[32m+[m[32m    #[m
+[32m+[m[32m    # tour_tsp = [][m
+[32m+[m[32m    # tour_p = [][m
+[32m+[m[32m    # while len(tour_tsp) < length1:[m
+[32m+[m[32m    #     p = oracle(tour_tsp)[m
+[32m+[m[32m    #     i = np.argmax(p)[m
+[32m+[m[32m    #     tour_tsp.append(i)[m
+[32m+[m[32m    #     tour_p.append(p)[m
+[32m+[m[32m    #[m
+[32m+[m[32m    # print(tour_tsp)[m
+[32m+[m
+[32m+[m[32m# if length1 < length2:[m
+[32m+[m[32mtours = pi1[m
+[32m+[m[32m# print(tours.numpy().shape)[m
+[32m+[m[32m# print(tours)[m
+[32m+[m[32m# print(pi2.numpy().shape)[m
+[32m+[m[32m# print(pi2)[m
+[32m+[m
+[32m+[m[32mfor i, (data, tour) in enumerate(zip(dataset, tours)):[m
+[32m+[m[32m    # print(tour.numpy().shape)[m
+[32m+[m[32m    # print(tour)[m
+[32m+[m[32m    # print("hello")[m
+[32m+[m[32m    fig, ax = plt.subplots(figsize=(10, 10))[m
+[32m+[m[32m    # print("vrp\n")[m
+[32m+[m[32m    plot_vehicle_routes(data, tour, ax, visualize_demands=False, demand_scale=50, round_demand=True)[m
+[32m+[m[32m    fig.savefig(os.path.join('images', 'cvrp_v2{}.png'.format(i)))[m
+[32m+[m
+[32m+[m[32mfor i, (data, tour) in enumerate(zip(dataset, tours)):[m
+[32m+[m[32m    newcoords, new_routes = get_routes_and_coords(data, tour)[m
+[32m+[m[32m    # print(len(newcoords))[m
+[32m+[m[32m    newroutes = [][m
+[32m+[m[32m    # j=0[m
+[32m+[m[32m    for k in newcoords:[m
+[32m+[m[32m        with torch.no_grad():[m
+[32m+[m[32m            # print(k)[m
+[32m+[m[32m            # print(torch.FloatTensor([k]).numpy().shape)[m
+[32m+[m[32m            # print(batch['loc'].numpy().shape)[m
+[32m+[m[32m            length2, log_p2, pi2 = model2(torch.FloatTensor([k]), return_pi=True)[m
+[32m+[m[32m        # print("pi2", length2, log_p2, pi2)[m
+[32m+[m[32m        # j=j+1[m
+[32m+[m[32m        tour2 = pi2.tolist()[0][m
+[32m+[m
+[32m+[m[32m        for j in range(len(tour2)):[m
+[32m+[m[32m            tour2[j] = coord_to_loc(data, k[j])[m
+[32m+[m[32m        # print(tour2)[m
+[32m+[m[32m        newroutes = newroutes + tour2[m
+[32m+[m[32m        newroutes.append(0)[m
+[32m+[m[32m    fig, ax = plt.subplots(figsize=(10, 10))[m
+[32m+[m[32m    # print(tour.numpy())[m
+[32m+[m[32m    # print("\n\n")[m
+[32m+[m[32m    # print(newroutes)[m
+[32m+[m[32m    # print("tsp\n")[m
+[32m+[m[32m    plot_vehicle_routes(data, torch.IntTensor(newroutes), ax, visualize_demands=False, demand_scale=50, round_demand=True)[m
+[32m+[m[32m    fig.savefig(os.path.join('images', 'cvrp_and_tsp_{}.png'.format(i)))[m
+[32m+[m[32m    # tspdata = DataLoader(TSP.make_dataset(size=100, num_samples=10), batch_size=1000)[m
+[32m+[m[32m# tspdata = DataLoader(TSP.make_dataset(inputdata=tours.numpy(), num_samples=10), batch_size=1000)[m
+[32m+[m[32m# batch = next(iter(tspdata))[m
+[32m+[m[32m# print(batch)[m
+[32m+[m[32m# with torch.no_grad():[m
+[32m+[m[32m#     length2, log_p2, pi2 = model2(batch['loc'], return_pi=True)[m
+[32m+[m
+[32m+[m[32m# length2, log_p2, pi2 = model2(tours, return_pi=True)[m
+[32m+[m[32m# tours2 = pi2[m
+[32m+[m[32m# print(tours2)[m
+[32m+[m[32m# else:[m
+[32m+[m
+[32m+[m[32m# Plot the results[m
+[32m+[m[32m# for i, (data, tour) in enumerate(zip(dataset, tours2)):[m
+[32m+[m[32m#     fig, ax = plt.subplots(figsize=(10, 10))[m
+[32m+[m[32m#     plot_vehicle_routes(data, tour, ax, visualize_demands=False, demand_scale=50, round_demand=True)[m
+[32m+[m[32m#     fig.savefig(os.path.join('images', 'cvrp_and_tsp_{}.png'.format(i)))[m
+[32m+[m[32m# animation = simple_tsp.plot_tsp_ani(data, tour, tour_p).animate(interval=500)[m
+[32m+[m[32m# writer = PillowWriter(fps=2)[m
+[32m+[m[32m# ani.save("demo_sine.gif", writer=writer)[m
+[32m+[m[32m# animation.save('images/tsp_adjusted.gif', writer='writer', fps=2)[m
+[32m+[m
+[32m+[m
+[32m+[m
+[32m+[m
+[32m+[m[32m# In[ ]:[m
+[32m+[m
+[32m+[m
+[32m+[m
+[32m+[m
+[1mdiff --git a/problems/tsp/problem_tsp.py b/problems/tsp/problem_tsp.py[m
+[1mindex 6d7859a..da6a7d7 100644[m
+[1m--- a/problems/tsp/problem_tsp.py[m
+[1m+++ b/problems/tsp/problem_tsp.py[m
+[36m@@ -54,7 +54,7 @@[m [mclass TSP(object):[m
+ [m
+ class TSPDataset(Dataset):[m
+     [m
+[31m-    def __init__(self, filename=None, size=50, num_samples=1000000, offset=0, distribution=None):[m
+[32m+[m[32m    def __init__(self, filename=None, size=50, num_samples=1000000, offset=0, distribution=None, inputdata=[]):[m
+         super(TSPDataset, self).__init__()[m
+ [m
+         self.data_set = [][m
+[36m@@ -64,6 +64,9 @@[m [mclass TSPDataset(Dataset):[m
+             with open(filename, 'rb') as f:[m
+                 data = pickle.load(f)[m
+                 self.data = [torch.FloatTensor(row) for row in (data[offset:offset+num_samples])][m
+[32m+[m[32m                print(self.data)[m
+[32m+[m[32m        elif len(inputdata) > 0:[m
+[32m+[m[32m            self.data = [torch.FloatTensor(row, 2) for row in (inputdata[offset:offset+num_samples])][m
+         else:[m
+             # Sample points randomly in [0, 1] square[m
+             self.data = [torch.FloatTensor(size, 2).uniform_(0, 1) for i in range(num_samples)][m
+[1mdiff --git a/simple_tsp.py b/simple_tsp.py[m
+[1mnew file mode 100644[m
+[1mindex 0000000..9a78ab6[m
+[1m--- /dev/null[m
+[1m+++ b/simple_tsp.py[m
+[36m@@ -0,0 +1,233 @@[m
+[32m+[m[32m#!/usr/bin/env python[m
+[32m+[m[32m# coding: utf-8[m
+[32m+[m
+[32m+[m[32m# In[1]:[m
+[32m+[m
+[32m+[m
+[32m+[m[32mimport os[m
+[32m+[m[32mimport numpy as np[m
+[32m+[m[32mimport torch[m
+[32m+[m
+[32m+[m
+[32m+[m[32m# In[2]:[m
+[32m+[m
+[32m+[m
+[32m+[m[32mfrom utils import load_model[m
+[32m+[m[32mmodel, _ = load_model('pretrained/tsp_100/')[m
+[32m+[m[32mmodel.eval()  # Put in evaluation mode to not track gradients[m
+[32m+[m
+[32m+[m[32mxy = np.random.rand(100, 2)[m
+[32m+[m[32m# print(xy)[m
+[32m+[m
+[32m+[m[32mdef make_oracle(model, xy, temperature=1.0):[m
+[32m+[m[41m    [m
+[32m+[m[32m    num_nodes = len(xy)[m
+[32m+[m[41m    [m
+[32m+[m[32m    xyt = torch.tensor(xy).float()[None]  # Add batch dimension[m
+[32m+[m[41m    [m
+[32m+[m[32m    with torch.no_grad():  # Inference only[m
+[32m+[m[32m        embeddings, _ = model.embedder(model._init_embed(xyt))[m
+[32m+[m
+[32m+[m[32m        # Compute keys, values for the glimpse and keys for the logits once as they can be reused in every step[m
+[32m+[m[32m        fixed = model._precompute(embeddings)[m
+[32m+[m[41m    [m
+[32m+[m[32m    def oracle(tour):[m
+[32m+[m[32m        with torch.no_grad():  # Inference only[m
+[32m+[m[32m            # Input tour with 0 based indices[m
+[32m+[m[32m            # Output vector with probabilities for locations not in tour[m
+[32m+[m[32m            tour = torch.tensor(tour).long()[m
+[32m+[m[32m            if len(tour) == 0:[m
+[32m+[m[32m                step_context = model.W_placeholder[m
+[32m+[m[32m            else:[m
+[32m+[m[32m                step_context = torch.cat((embeddings[0, tour[0]], embeddings[0, tour[-1]]), -1)[m
+[32m+[m
+[32m+[m[32m            # Compute query = context node embedding, add batch and step dimensions (both 1)[m
+[32m+[m[32m            query = fixed.context_node_projected + model.project_step_context(step_context[None, None, :])[m
+[32m+[m
+[32m+[m[32m            # Create the mask and convert to bool depending on PyTorch version[m
+[32m+[m[32m            mask = torch.zeros(num_nodes, dtype=torch.uint8) > 0[m
+[32m+[m[32m            mask[tour] = 1[m
+[32m+[m[32m            mask = mask[None, None, :]  # Add batch and step dimension[m
+[32m+[m
+[32m+[m[32m            log_p, _ = model._one_to_many_logits(query, fixed.glimpse_key, fixed.glimpse_val, fixed.logit_key, mask)[m
+[32m+[m[32m            p = torch.softmax(log_p / temperature, -1)[0, 0][m
+[32m+[m[32m            assert (p[tour] == 0).all()[m
+[32m+[m[32m            assert (p.sum() - 1).abs() < 1e-5[m
+[32m+[m[32m            #assert np.allclose(p.sum().item(), 1)[m
+[32m+[m[32m        return p.numpy()[m
+[32m+[m[41m    [m
+[32m+[m[32m    return oracle[m
+[32m+[m[41m        [m
+[32m+[m
+[32m+[m
+[32m+[m[32moracle = make_oracle(model, xy)[m
+[32m+[m
+[32m+[m[32msample = False[m
+[32m+[m[32mtour = [][m
+[32m+[m[32mtour_p = [][m
+[32m+[m[32mwhile(len(tour) < len(xy)):[m
+[32m+[m[32m    p = oracle(tour)[m
+[32m+[m[41m    [m
+[32m+[m[32m    if sample:[m
+[32m+[m[32m        # Advertising the Gumbel-Max trick[m
+[32m+[m[32m        g = -np.log(-np.log(np.random.rand(*p.shape)))[m
+[32m+[m[32m        i = np.argmax(np.log(p) + g)[m
+[32m+[m[32m        # i = np.random.multinomial(1, p)[m
+[32m+[m[32m    else:[m
+[32m+[m[32m        # Greedy[m
+[32m+[m[32m        i = np.argmax(p)[m
+[32m+[m[32m    tour.append(i)[m
+[32m+[m[32m    tour_p.append(p)[m
+[32m+[m[41m    [m
+[32m+[m[32mprint(tour)[m
+[32m+[m
+[32m+[m
+[32m+[m[32m# In[3]:[m
+[32m+[m
+[32m+[m
+[32m+[m[32m# get_ipython().run_line_magic('matplotlib', 'inline')[m
+[32m+[m[32mfrom matplotlib import pyplot as plt[m
+[32m+[m
+[32m+[m[32mfrom matplotlib.collections import PatchCollection[m
+[32m+[m[32mfrom matplotlib.patches import Rectangle[m
+[32m+[m[32mfrom matplotlib.lines import Line2D[m
+[32m+[m
+[32m+[m[32m# Code inspired by Google OR Tools plot:[m
+[32m+[m[32m# https://github.com/google/or-tools/blob/fb12c5ded7423d524fc6c95656a9bdc290a81d4d/examples/python/cvrptw_plot.py[m
+[32m+[m
+[32m+[m[32mdef plot_tsp(xy, tour, ax1):[m
+[32m+[m[32m    """[m
+[32m+[m[32m    Plot the TSP tour on matplotlib axis ax1.[m
+[32m+[m[32m    """[m
+[32m+[m[41m    [m
+[32m+[m[32m    ax1.set_xlim(0, 1)[m
+[32m+[m[32m    ax1.set_ylim(0, 1)[m
+[32m+[m[41m    [m
+[32m+[m[32m    xs, ys = xy[tour].transpose()[m
+[32m+[m[32m    xs, ys = xy[tour].transpose()[m
+[32m+[m[32m    dx = np.roll(xs, -1) - xs[m
+[32m+[m[32m    dy = np.roll(ys, -1) - ys[m
+[32m+[m[32m    d = np.sqrt(dx * dx + dy * dy)[m
+[32m+[m[32m    lengths = d.cumsum()[m
+[32m+[m[41m    [m
+[32m+[m[32m    # Scatter nodes[m
+[32m+[m[32m    ax1.scatter(xs, ys, s=40, color='blue')[m
+[32m+[m[32m    # Starting node[m
+[32m+[m[32m    ax1.scatter([xs[0]], [ys[0]], s=100, color='red')[m
+[32m+[m[41m    [m
+[32m+[m[32m    # Arcs[m
+[32m+[m[32m    qv = ax1.quiver([m
+[32m+[m[32m        xs, ys, dx, dy,[m
+[32m+[m[32m        scale_units='xy',[m
+[32m+[m[32m        angles='xy',[m
+[32m+[m[32m        scale=1,[m
+[32m+[m[32m    )[m
+[32m+[m[41m    [m
+[32m+[m[32m    ax1.set_title('{} nodes, total length {:.2f}'.format(len(tour), lengths[-1]))[m
+[32m+[m[41m    [m
+[32m+[m[32mfig, ax = plt.subplots(figsize=(10, 10))[m
+[32m+[m[32mplot_tsp(xy, tour, ax)[m
+[32m+[m
+[32m+[m
+[32m+[m[32m# In[4]:[m
+[32m+[m
+[32m+[m
+[32m+[m[32mfrom matplotlib.collections import PatchCollection[m
+[32m+[m[32mfrom matplotlib.patches import Rectangle[m
+[32m+[m[32mfrom matplotlib.animation import PillowWriter[m
+[32m+[m[32mfrom matplotlib.lines import Line2D[m
+[32m+[m[32mfrom IPython.display import HTML[m
+[32m+[m
+[32m+[m[32mfrom celluloid import Camera  # pip install celluloid[m
+[32m+[m
+[32m+[m[32mdef format_prob(prob):[m
+[32m+[m[32m    return ('{:.6f}' if prob > 1e-5 else '{:.2E}').format(prob)[m
+[32m+[m
+[32m+[m[32mdef plot_tsp_ani(xy, tour, tour_p=None, max_steps=1000):[m
+[32m+[m[32m    n = len(tour)[m
+[32m+[m[32m    fig, ax1 = plt.subplots(figsize=(10, 10))[m
+[32m+[m[32m    xs, ys = xy[tour].transpose()[m
+[32m+[m[32m    dx = np.roll(xs, -1) - xs[m
+[32m+[m[32m    dy = np.roll(ys, -1) - ys[m
+[32m+[m[32m    d = np.sqrt(dx * dx + dy * dy)[m
+[32m+[m[32m    lengths = d.cumsum()[m
+[32m+[m[41m    [m
+[32m+[m[32m    ax1.set_xlim(0, 1)[m
+[32m+[m[32m    ax1.set_ylim(0, 1)[m
+[32m+[m
+[32m+[m[32m    camera = Camera(fig)[m
+[32m+[m
+[32m+[m[32m    total_length = 0[m
+[32m+[m[32m    cum_log_prob = 0[m
+[32m+[m[32m    for i in range(n + 1):[m
+[32m+[m[32m        for plot_probs in [False] if tour_p is None or i >= n else [False, True]:[m
+[32m+[m[32m            # Title[m
+[32m+[m[32m            title = 'Nodes: {:3d}, length: {:.4f}, prob: {}'.format([m
+[32m+[m[32m                i, lengths[i - 2] if i > 1 else 0., format_prob(np.exp(cum_log_prob))[m
+[32m+[m[32m            )[m
+[32m+[m[32m            ax1.text(0.6, 0.97, title, transform=ax.transAxes)[m
+[32m+[m
+[32m+[m[32m            # First print current node and next candidates[m
+[32m+[m[32m            ax1.scatter(xs, ys, s=40, color='blue')[m
+[32m+[m
+[32m+[m[32m            if i > 0:[m
+[32m+[m[32m                ax1.scatter([xs[i - 1]], [ys[i - 1]], s=100, color='red')[m
+[32m+[m[32m            if i > 1:[m
+[32m+[m[32m                qv = ax1.quiver([m
+[32m+[m[32m                    xs[:i-1],[m
+[32m+[m[32m                    ys[:i-1],[m
+[32m+[m[32m                    dx[:i-1],[m
+[32m+[m[32m                    dy[:i-1],[m
+[32m+[m[32m                    scale_units='xy',[m
+[32m+[m[32m                    angles='xy',[m
+[32m+[m[32m                    scale=1,[m
+[32m+[m[32m                )[m
+[32m+[m[32m            if plot_probs:[m
+[32m+[m[32m                prob_rects = [Rectangle((x, y), 0.01, 0.1 * p) for (x, y), p in zip(xy, tour_p[i]) if p > 0.01][m
+[32m+[m[32m                pc = PatchCollection(prob_rects, facecolor='lightgray', alpha=1.0, edgecolor='lightgray')[m
+[32m+[m[32m                ax1.add_collection(pc)[m
+[32m+[m[32m            camera.snap()[m
+[32m+[m[32m        if i < n and tour_p is not None:[m
+[32m+[m[32m            # Add cumulative_probability[m
+[32m+[m[32m            cum_log_prob += np.log(tour_p[i][tour[i]])[m
+[32m+[m[32m        if i > max_steps:[m
+[32m+[m[32m            break[m
+[32m+[m
+[32m+[m[32m    # Plot final tour[m
+[32m+[m[32m    # Scatter nodes[m
+[32m+[m[32m    ax1.scatter(xs, ys, s=40, color='blue')[m
+[32m+[m[32m    # Starting node[m
+[32m+[m[32m    ax1.scatter([xs[0]], [ys[0]], s=100, color='red')[m
+[32m+[m[41m    [m
+[32m+[m[32m    # Arcs[m
+[32m+[m[32m    qv = ax1.quiver([m
+[32m+[m[32m        xs, ys, dx, dy,[m
+[32m+[m[32m        scale_units='xy',[m
+[32m+[m[32m        angles='xy',[m
+[32m+[m[32m        scale=1,[m
+[32m+[m[32m    )[m
+[32m+[m[32m    if tour_p is not None:[m
+[32m+[m[32m        # Note this does not use stable logsumexp trick[m
+[32m+[m[32m        cum_log_prob = format_prob(np.exp(sum([np.log(p[node]) for node, p in zip(tour, tour_p)])))[m
+[32m+[m[32m    else:[m
+[32m+[m[32m        cum_log_prob = '?'[m
+[32m+[m[32m    ax1.set_title('{} nodes, total length {:.4f}, prob: {}'.format(len(tour), lengths[-1], cum_log_prob))[m
+[32m+[m[41m    [m
+[32m+[m[32m    camera.snap()[m
+[32m+[m[41m    [m
+[32m+[m[32m    return camera[m[41m [m
+[32m+[m
+[32m+[m[41m    [m
+[32m+[m[32manimation = plot_tsp_ani(xy, tour, tour_p).animate(interval=500)[m
+[32m+[m[32mwriter = PillowWriter(fps=2)[m
+[32m+[m[32m# ani.save("demo_sine.gif", writer=writer)[m
+[32m+[m[32manimation.save('images/tsp_adjusted.gif', writer='writer', fps=2)  # requires imagemagick[m
+[32m+[m[32m# compress by running 'convert tsp.gif -strip -coalesce -layers Optimize tsp.gif'[m
+[32m+[m[32m# HTML(animation.to_html5_video())  # requires ffmpeg[m
+[32m+[m
+[32m+[m
+[32m+[m[32m# In[ ]:[m
+[32m+[m
+[32m+[m
+[32m+[m
+[32m+[m
+[1mdiff --git a/tsp_applied.py b/tsp_applied.py[m
+[1mnew file mode 100644[m
+[1mindex 0000000..aa6474d[m
+[1m--- /dev/null[m
+[1m+++ b/tsp_applied.py[m
+[36m@@ -0,0 +1,230 @@[m
+[32m+[m[32m#!/usr/bin/env python[m
+[32m+[m[32m# coding: utf-8[m
+[32m+[m
+[32m+[m[32m# In[1]:[m
+[32m+[m
+[32m+[m
+[32m+[m[32mimport os[m
+[32m+[m[32mimport numpy as np[m
+[32m+[m[32mimport torch[m
+[32m+[m
+[32m+[m[32m# In[2]:[m
+[32m+[m
+[32m+[m
+[32m+[m[32mfrom utils import load_model[m
+[32m+[m
+[32m+[m[32mmodel, _ = load_model('pretrained/tsp_100/')[m
+[32m+[m[32mmodel.eval()  # Put in evaluation mode to not track gradients[m
+[32m+[m
+[32m+[m[32mxy = np.random.rand(100, 2)[m
+[32m+[m
+[32m+[m
+[32m+[m[32mdef make_oracle(model, xy, temperature=1.0):[m
+[32m+[m[32m    num_nodes = len(xy)[m
+[32m+[m
+[32m+[m[32m    xyt = torch.tensor(xy).float()[None]  # Add batch dimension[m
+[32m+[m
+[32m+[m[32m    with torch.no_grad():  # Inference only[m
+[32m+[m[32m        embeddings, _ = model.embedder(model._init_embed(xyt))[m
+[32m+[m
+[32m+[m[32m        # Compute keys, values for the glimpse and keys for the logits once as they can be reused in every step[m
+[32m+[m[32m        fixed = model._precompute(embeddings)[m
+[32m+[m
+[32m+[m[32m    def oracle(tour):[m
+[32m+[m[32m        with torch.no_grad():  # Inference only[m
+[32m+[m[32m            # Input tour with 0 based indices[m
+[32m+[m[32m            # Output vector with probabilities for locations not in tour[m
+[32m+[m[32m            tour = torch.tensor(tour).long()[m
+[32m+[m[32m            if len(tour) == 0:[m
+[32m+[m[32m                step_context = model.W_placeholder[m
+[32m+[m[32m            else:[m
+[32m+[m[32m                step_context = torch.cat((embeddings[0, tour[0]], embeddings[0, tour[-1]]), -1)[m
+[32m+[m
+[32m+[m[32m            # Compute query = context node embedding, add batch and step dimensions (both 1)[m
+[32m+[m[32m            query = fixed.context_node_projected + model.project_step_context(step_context[None, None, :])[m
+[32m+[m
+[32m+[m[32m            # Create the mask and convert to bool depending on PyTorch version[m
+[32m+[m[32m            mask = torch.zeros(num_nodes, dtype=torch.uint8) > 0[m
+[32m+[m[32m            mask[tour] = 1[m
+[32m+[m[32m            mask = mask[None, None, :]  # Add batch and step dimension[m
+[32m+[m
+[32m+[m[32m            log_p, _ = model._one_to_many_logits(query, fixed.glimpse_key, fixed.glimpse_val, fixed.logit_key, mask)[m
+[32m+[m[32m            p = torch.softmax(log_p / temperature, -1)[0, 0][m
+[32m+[m[32m            assert (p[tour] == 0).all()[m
+[32m+[m[32m            assert (p.sum() - 1).abs() < 1e-5[m
+[32m+[m[32m            # assert np.allclose(p.sum().item(), 1)[m
+[32m+[m[32m        return p.numpy()[m
+[32m+[m
+[32m+[m[32m    return oracle[m
+[32m+[m
+[32m+[m
+[32m+[m[32moracle = make_oracle(model, xy)[m
+[32m+[m
+[32m+[m[32msample = False[m
+[32m+[m[32mtour = [][m
+[32m+[m[32mtour_p = [][m
+[32m+[m[32mwhile (len(tour) < len(xy)):[m
+[32m+[m[32m    p = oracle(tour)[m
+[32m+[m
+[32m+[m[32m    if sample:[m
+[32m+[m[32m        # Advertising the Gumbel-Max trick[m
+[32m+[m[32m        g = -np.log(-np.log(np.random.rand(*p.shape)))[m
+[32m+[m[32m        i = np.argmax(np.log(p) + g)[m
+[32m+[m[32m        # i = np.random.multinomial(1, p)[m
+[32m+[m[32m    else:[m
+[32m+[m[32m        # Greedy[m
+[32m+[m[32m        i = np.argmax(p)[m
+[32m+[m[32m    tour.append(i)[m
+[32m+[m[32m    tour_p.append(p)[m
+[32m+[m[32mprint(xy)[m
+[32m+[m[32mprint(tour)[m
+[32m+[m
+[32m+[m[32m# In[3]:[m
+[32m+[m
+[32m+[m
+[32m+[m[32m# get_ipython().run_line_magic('matplotlib', 'inline')[m
+[32m+[m[32mfrom matplotlib import pyplot as plt[m
+[32m+[m
+[32m+[m[32mfrom matplotlib.collections import PatchCollection[m
+[32m+[m[32mfrom matplotlib.patches import Rectangle[m
+[32m+[m[32mfrom matplotlib.lines import Line2D[m
+[32m+[m
+[32m+[m
+[32m+[m[32m# Code inspired by Google OR Tools plot:[m
+[32m+[m[32m# https://github.com/google/or-tools/blob/fb12c5ded7423d524fc6c95656a9bdc290a81d4d/examples/python/cvrptw_plot.py[m
+[32m+[m
+[32m+[m[32mdef plot_tsp(xy, tour, ax1):[m
+[32m+[m[32m    """[m
+[32m+[m[32m    Plot the TSP tour on matplotlib axis ax1.[m
+[32m+[m[32m    """[m
+[32m+[m
+[32m+[m[32m    ax1.set_xlim(0, 1)[m
+[32m+[m[32m    ax1.set_ylim(0, 1)[m
+[32m+[m
+[32m+[m[32m    xs, ys = xy[tour].transpose()[m
+[32m+[m[32m    xs, ys = xy[tour].transpose()[m
+[32m+[m[32m    dx = np.roll(xs, -1) - xs[m
+[32m+[m[32m    dy = np.roll(ys, -1) - ys[m
+[32m+[m[32m    d = np.sqrt(dx * dx + dy * dy)[m
+[32m+[m[32m    lengths = d.cumsum()[m
+[32m+[m
+[32m+[m[32m    # Scatter nodes[m
+[32m+[m[32m    ax1.scatter(xs, ys, s=40, color='blue')[m
+[32m+[m[32m    # Starting node[m
+[32m+[m[32m    ax1.scatter([xs[0]], [ys[0]], s=100, color='red')[m
+[32m+[m
+[32m+[m[32m    # Arcs[m
+[32m+[m[32m    qv = ax1.quiver([m
+[32m+[m[32m        xs, ys, dx, dy,[m
+[32m+[m[32m        scale_units='xy',[m
+[32m+[m[32m        angles='xy',[m
+[32m+[m[32m        scale=1,[m
+[32m+[m[32m    )[m
+[32m+[m
+[32m+[m[32m    ax1.set_title('{} nodes, total length {:.2f}'.format(len(tour), lengths[-1]))[m
+[32m+[m
+[32m+[m
+[32m+[m[32mfig, ax = plt.subplots(figsize=(10, 10))[m
+[32m+[m[32mplot_tsp(xy, tour, ax)[m
+[32m+[m
+[32m+[m[32m# In[4]:[m
+[32m+[m
+[32m+[m
+[32m+[m[32mfrom matplotlib.collections import PatchCollection[m
+[32m+[m[32mfrom matplotlib.patches import Rectangle[m
+[32m+[m[32mfrom matplotlib.lines import Line2D[m
+[32m+[m[32mfrom IPython.display import HTML[m
+[32m+[m
+[32m+[m[32mfrom celluloid import Camera  # pip install celluloid[m
+[32m+[m
+[32m+[m
+[32m+[m[32mdef format_prob(prob):[m
+[32m+[m[32m    return ('{:.6f}' if prob > 1e-5 else '{:.2E}').format(prob)[m
+[32m+[m
+[32m+[m
+[32m+[m[32mdef plot_tsp_ani(xy, tour, tour_p=None, max_steps=1000):[m
+[32m+[m[32m    n = len(tour)[m
+[32m+[m[32m    fig, ax1 = plt.subplots(figsize=(10, 10))[m
+[32m+[m[32m    xs, ys = xy[tour].transpose()[m
+[32m+[m[32m    dx = np.roll(xs, -1) - xs[m
+[32m+[m[32m    dy = np.roll(ys, -1) - ys[m
+[32m+[m[32m    d = np.sqrt(dx * dx + dy * dy)[m
+[32m+[m[32m    lengths = d.cumsum()[m
+[32m+[m
+[32m+[m[32m    ax1.set_xlim(0, 1)[m
+[32m+[m[32m    ax1.set_ylim(0, 1)[m
+[32m+[m
+[32m+[m[32m    camera = Camera(fig)[m
+[32m+[m
+[32m+[m[32m    total_length = 0[m
+[32m+[m[32m    cum_log_prob = 0[m
+[32m+[m[32m    for i in range(n + 1):[m
+[32m+[m[32m        for plot_probs in [False] if tour_p is None or i >= n else [False, True]:[m
+[32m+[m[32m            # Title[m
+[32m+[m[32m            title = 'Nodes: {:3d}, length: {:.4f}, prob: {}'.format([m
+[32m+[m[32m                i, lengths[i - 2] if i > 1 else 0., format_prob(np.exp(cum_log_prob))[m
+[32m+[m[32m            )[m
+[32m+[m[32m            ax1.text(0.6, 0.97, title, transform=ax.transAxes)[m
+[32m+[m
+[32m+[m[32m            # First print current node and next candidates[m
+[32m+[m[32m            ax1.scatter(xs, ys, s=40, color='blue')[m
+[32m+[m
+[32m+[m[32m            if i > 0:[m
+[32m+[m[32m                ax1.scatter([xs[i - 1]], [ys[i - 1]], s=100, color='red')[m
+[32m+[m[32m            if i > 1:[m
+[32m+[m[32m                qv = ax1.quiver([m
+[32m+[m[32m                    xs[:i - 1],[m
+[32m+[m[32m                    ys[:i - 1],[m
+[32m+[m[32m                    dx[:i - 1],[m
+[32m+[m[32m                    dy[:i - 1],[m
+[32m+[m[32m                    scale_units='xy',[m
+[32m+[m[32m                    angles='xy',[m
+[32m+[m[32m                    scale=1,[m
+[32m+[m[32m                )[m
+[32m+[m[32m            if plot_probs:[m
+[32m+[m[32m                prob_rects = [Rectangle((x, y), 0.01, 0.1 * p) for (x, y), p in zip(xy, tour_p[i]) if p > 0.01][m
+[32m+[m[32m                pc = PatchCollection(prob_rects, facecolor='lightgray', alpha=1.0, edgecolor='lightgray')[m
+[32m+[m[32m                ax1.add_collection(pc)[m
+[32m+[m[32m            camera.snap()[m
+[32m+[m[32m        if i < n and tour_p is not None:[m
+[32m+[m[32m            # Add cumulative_probability[m
+[32m+[m[32m            cum_log_prob += np.log(tour_p[i][tour[i]])[m
+[32m+[m[32m        if i > max_steps:[m
+[32m+[m[32m            break[m
+[32m+[m
+[32m+[m[32m    # Plot final tour[m
+[32m+[m[32m    # Scatter nodes[m
+[32m+[m[32m    ax1.scatter(xs, ys, s=40, color='blue')[m
+[32m+[m[32m    # Starting node[m
+[32m+[m[32m    ax1.scatter([xs[0]], [ys[0]], s=100, color='red')[m
+[32m+[m
+[32m+[m[32m    # Arcs[m
+[32m+[m[32m    qv = ax1.quiver([m
+[32m+[m[32m        xs, ys, dx, dy,[m
+[32m+[m[32m        scale_units='xy',[m
+[32m+[m[32m        angles='xy',[m
+[32m+[m[32m        scale=1,[m
+[32m+[m[32m    )[m
+[32m+[m[32m    if tour_p is not None:[m
+[32m+[m[32m        # Note this does not use stable logsumexp trick[m
+[32m+[m[32m        cum_log_prob = format_prob(np.exp(sum([np.log(p[node]) for node, p in zip(tour, tour_p)])))[m
+[32m+[m[32m    else:[m
+[32m+[m[32m        cum_log_prob = '?'[m
+[32m+[m[32m    ax1.set_title('{} nodes, total length {:.4f}, prob: {}'.format(len(tour), lengths[-1], cum_log_prob))[m
+[32m+[m
+[32m+[m[32m    camera.snap()[m
+[32m+[m
+[32m+[m[32m    return camera[m
+[32m+[m
+[32m+[m
+[32m+[m[32manimation = plot_tsp_ani(xy, tour, tour_p).animate(interval=500)[m
+[32m+[m[32m# animation.save('images/tsp.gif', writer='imagemagick', fps=2)  # requires imagemagick[m
+[32m+[m[32m# compress by running 'convert tsp.gif -strip -coalesce -layers Optimize tsp.gif'[m
+[32m+[m[32m# HTML(animation.to_html5_video())  # requires ffmpeg[m
+[32m+[m
+[32m+[m
+[32m+[m[32m# In[ ]:[m
+[32m+[m
+[32m+[m
+[32m+[m
+[32m+[m
