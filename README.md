@@ -28,7 +28,8 @@ For more details, please see our paper [Analyzing the Vehicle Route Problem: A H
 ## Differences
 To view the differences between the implementation in this codebase, reference [this document]() to view pdf that will 
 compare the original code with the added code. The greatest changes were made in [plot_vrp.py](plot_vrp.py), [simple_tsp.py](simple_tsp.py),
-as well as smaller changes and additions in other locations.<br />
+as well as smaller changes and additions in other locations. Most of the more significant changes that were made by us have a comment 
+somewhere near the top indicating that it is original code, but not all changes are indicated in this way.<br />
 <br />
 A `.diff` file is also available [here](readfiles/differences.diff)
 
