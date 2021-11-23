@@ -1,11 +1,19 @@
 # Analyzing the Vehicle Route Problem: A Heuristic Approach to Route Planning and Optimization
 
 ## Introduction
-This model incorporates the attention based model from the paper [Attention, Learn to Solve Routing Problems!](https://openreview.net/forum?id=ByxBFsRqYm) which has been accepted at [ICLR 2019](https://iclr.cc/Conferences/2019) for learning to solve the Travelling Salesman Problem (TSP) and the Vehicle Routing Problem (VRP), Orienteering Problem (OP) and (Stochastic) Prize Collecting TSP (PCTSP). Training with REINFORCE with greedy rollout baseline.
-The paper describing this specific extension of the aforementioned model is from the paper [Analyzing the Vehicle Route Problem: A Heuristic Approach to Route Planning and Optimization](paper.pdf)
+This model incorporates the attention based model from the paper [Attention, Learn to Solve Routing Problems!](https://openreview.net/forum?id=ByxBFsRqYm) which was accepted at [ICLR 2019](https://iclr.cc/Conferences/2019) for learning to solve the Travelling Salesman Problem (TSP) and the Vehicle Routing Problem (VRP), Orienteering Problem (OP) and (Stochastic) Prize Collecting TSP (PCTSP). Training with REINFORCE with greedy rollout baseline.
+<br />
+<br />
+The paper describing this specific extension of the aforementioned model is from the paper [Analyzing the Vehicle Route Problem: A Heuristic Approach to Route Planning and Optimization](readfiles/paper.pdf)
+<br />
+<br />
+Note: All files linked in this README are accessible in the following locations:
+* Images are in [images/](images)
+* Python scripts are in the root directory
+* All other filetypes (PDF, diff, etc.) are in [readfiles/](readfiles)
 
 ## Paper
-For more details, please see our paper [Analyzing the Vehicle Route Problem: A Heuristic Approach to Route Planning and Optimization](paper.pdf).
+For more details, please see our paper [Analyzing the Vehicle Route Problem: A Heuristic Approach to Route Planning and Optimization](readfiles/paper.pdf).
 
 ## Dependencies
 
@@ -18,93 +26,45 @@ For more details, please see our paper [Analyzing the Vehicle Route Problem: A H
 * Matplotlib (optional, only for plotting)
 
 ## Differences
-To view the differences between the implementation in this codebase, follow [this link]() to view an open pull request that will show the file discrepancies.
+To view the differences between the implementation in this codebase, reference [this document]() to view pdf that will 
+compare the original code with the added code. The greatest changes were made in [plot_vrp.py](plot_vrp.py), [simple_tsp.py](simple_tsp.py),
+as well as smaller changes and additions in other locations.<br />
+<br />
+A `.diff` file is also available [here](readfiles/differences.diff)
 
-
-
-
-## Quick start
-
-For training TSP instances with 20 nodes and using rollout as REINFORCE baseline:
-```bash
-python run.py --graph_size 20 --baseline rollout --run_name 'tsp20_rollout'
+## Running the code
+To run the code that demonstrates the implementation described in the paper (which as noted, did not make any real changes to the
+sample routes that were being utilized), run the following command in the root folder:
 ```
-
-## Usage
-
-### Generating data
-
-Training data is generated on the fly. To generate validation and test data (same as used in the paper) for all problems:
-```bash
-python generate_data.py --problem all --name validation --seed 4321
-python generate_data.py --problem all --name test --seed 1234
+python plot_vrp.py
 ```
+The output will be two sets of ten images, one which runs the Capacitated Vehicle Routing Problem (CVRP) ```cvrp_100``` model on 
+a graph of 100 nodes, and one which runs this as well as the Traveling Salesman Problem (TSP) ```tsp_100``` model on each
+outputted route from the ```cvrp_100``` model. An example is shown below: <br />
+<br />
+CVRP:
+![CVRP100](images/cvrp_0.png)<br />
 
-### Training
+CVRP + TSP on routes:
+![CVRPTSP100](images/cvrp_and_tsp_0.png)
 
-For training TSP instances with 20 nodes and using rollout as REINFORCE baseline and using the generated validation set:
-```bash
-python run.py --graph_size 20 --baseline rollout --run_name 'tsp20_rollout' --val_dataset data/tsp/tsp20_validation_seed4321.pkl
-```
+Observing the two images it is clear that each route is identical, and the distance for each 
+route as well as the total distance did not change.<br />
+<br />
+The [plot_vrp.py](plot_vrp.py) script can be altered in order to apply different versions of the CVRP models as well as different 
+versions of the TSP model that is overlayed by following the steps from [the original README file](readfiles/README(Kool).md) which allow
+users to generate and train models with specific parameters. If the amount of graph nodes is changed for the new model, this 
+must also be adjusted in the [plot_vrp.py](plot_vrp.py) script. 
 
-#### Multiple GPUs
-By default, training will happen *on all available GPUs*. To disable CUDA at all, add the flag `--no_cuda`. 
-Set the environment variable `CUDA_VISIBLE_DEVICES` to only use specific GPUs:
-```bash
-CUDA_VISIBLE_DEVICES=2,3 python run.py 
-```
-Note that using multiple GPUs has limited efficiency for small problem sizes (up to 50 nodes).
+## Slight improvements with Beam Search
 
-#### Warm start
-You can initialize a run using a pretrained model by using the `--load_path` option:
-```bash
-python run.py --graph_size 100 --load_path pretrained/tsp_100/epoch-99.pt
-```
+The [run.py](run.py) file has the ability to train models using Beam Search, and this slightly improves the CVRP model as seen
+in this image below, which is the output after creating and training a CVRP model for a graph of 20 nodes.<br />
+![beam](images/Beam Search.jpg)
+The average cost for a route using a model with beam search is slightly less than it would be when using a model without.
 
-The `--load_path` option can also be used to load an earlier run, in which case also the optimizer state will be loaded:
-```bash
-python run.py --graph_size 20 --load_path 'outputs/tsp_20/tsp20_rollout_{datetime}/epoch-0.pt'
-```
-
-The `--resume` option can be used instead of the `--load_path` option, which will try to resume the run, e.g. load additionally the baseline state, set the current epoch/step counter and set the random number generator state.
-
-### Evaluation
-To evaluate a model, you can add the `--eval-only` flag to `run.py`, or use `eval.py`, which will additionally measure timing and save the results:
-```bash
-python eval.py data/tsp/tsp20_test_seed1234.pkl --model pretrained/tsp_20 --decode_strategy greedy
-```
-If the epoch is not specified, by default the last one in the folder will be used.
-
-#### Sampling
-To report the best of 1280 sampled solutions, use
-```bash
-python eval.py data/tsp/tsp20_test_seed1234.pkl --model pretrained/tsp_20 --decode_strategy sample --width 1280 --eval_batch_size 1
-```
-Beam Search (not in the paper) is also recently added and can be used using `--decode_strategy bs --width {beam_size}`.
-
-#### To run baselines
-Baselines for different problems are within the corresponding folders and can be ran (on multiple datasets at once) as follows
-```bash
-python -m problems.tsp.tsp_baseline farthest_insertion data/tsp/tsp20_test_seed1234.pkl data/tsp/tsp50_test_seed1234.pkl data/tsp/tsp100_test_seed1234.pkl
-```
-To run baselines, you need to install [Compass](https://github.com/bcamath-ds/compass) by running the `install_compass.sh` script from within the `problems/op` directory and [Concorde](http://www.math.uwaterloo.ca/tsp/concorde.html) using the `install_concorde.sh` script from within `problems/tsp`. [LKH3](http://akira.ruc.dk/~keld/research/LKH-3/) should be automatically downloaded and installed when required. To use [Gurobi](http://www.gurobi.com), obtain a ([free academic](http://www.gurobi.com/registration/academic-license-reg)) license and follow the [installation instructions](https://www.gurobi.com/documentation/8.1/quickstart_windows/installing_the_anaconda_py.html).
-
-### Other options and help
-```bash
-python run.py -h
-python eval.py -h
-```
-
-### Example CVRP solution
-See `plot_vrp.ipynb` for an example of loading a pretrained model and plotting the result for Capacitated VRP with 100 nodes.
-
-![CVRP100](images/cvrp_0.png)
 
 ## Acknowledgements
-Thanks to [pemami4911/neural-combinatorial-rl-pytorch](https://github.com/pemami4911/neural-combinatorial-rl-pytorch) for getting me started with the code for the Pointer Network.
 
-This repository includes adaptions of the following repositories as baselines:
-* https://github.com/MichelDeudon/encode-attend-navigate
-* https://github.com/mc-ride/orienteering
-* https://github.com/jordanamecler/PCTSP
-* https://github.com/rafael2reis/salesman
+This repository includes adaptions of the following repository as a baseline:
+* https://github.com/wouterkool/attention-learn-to-route
