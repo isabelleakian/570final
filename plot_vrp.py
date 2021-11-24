@@ -158,7 +158,7 @@ model1, _ = load_model('pretrained/cvrp_100/')
 model2, _ = load_model('pretrained/tsp_100/')
 
 torch.manual_seed(1234)
-dataset = CVRP.make_dataset(size=100, num_samples=10)
+dataset = CVRP.make_dataset(filename='data/vrp/vrp100_validation_seed4321.pkl', num_samples=10)
 
 
 # In[5]:
